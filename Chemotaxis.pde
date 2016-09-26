@@ -13,24 +13,24 @@ void draw()
 	background(0);	 //move and show the bacteria   
 	for(int i = 0; i < colony.length; i++)
 	{
-	
 		colony[i].move();
 		colony[i].show();
-
 	}
-
 }  
 class Bacteria    
 {         
-	int myX, myY;
+	int myX, myY, myColor, myColor2, myColor3;
 	Bacteria()
 	{
 		myX = 200;
 		myY = 200;
-		fill(255);
+		myColor = (int)(Math.random()*255);
+		myColor2 = (int)(Math.random()*255);
+		myColor3 = (int)(Math.random()*255);
 	}
 	void show()
 	{
+		fill(myColor,myColor2,myColor3);
 		ellipse(myX, myY, 20, 20);
 	}
 	void move()
